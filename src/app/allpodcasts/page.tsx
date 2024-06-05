@@ -14,9 +14,11 @@ export default function AllPodcasts () {
             </h1>
             <div className="pr-4 pl-4">
                 {podcastSrcs.map((podcast)=>
-                    <div className="justify-center">
-                        <Link href={podcast.podLink}>{podcast.title}</Link>
-                    </div>
+                    <ul key={podcast.podLink}>
+                        <div className="justify-center">
+                            <Link href={podcast.podLink}>{podcast.title}</Link>
+                        </div>
+                    </ul>
                 )}
             </div>
         </div>

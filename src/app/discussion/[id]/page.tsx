@@ -4,14 +4,14 @@ import Readings from "@/app/readings";
 import { usePathname } from "next/navigation";
   
 export default function discussion() {
-    const pathname = usePathname()
-    const readingObject = Readings().find((reading)=> reading.title === decodeURI(pathname.split('/')[2]))
+//     const pathname = usePathname()
+//     const readingObject = Readings().find((reading)=> reading.title === decodeURI(pathname.split('/')[2]))
 
     return (
         <div>
-            <h1 className="pt-6 mb-4 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            {/* <h1 className="pt-6 mb-4 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 {readingObject?.title}
-            </h1>
+            </h1> */}
             <p className="flex text-3xl dark:text-white font-bold">
                 Discussion.
             </p>

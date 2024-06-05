@@ -14,9 +14,13 @@ export default function AllReadings () {
             </h1>
             <div className="pr-4 pl-4">
                 {Readings().map((reading)=>
+                <ul key={reading.articleLink}>
                     <div className="justify-center">
-                        <Link href={reading.articleLink}>{reading.title}</Link>
+                       
+                            <Link href={reading.articleLink}>{reading.title}</Link>
+                       
                     </div>
+                    </ul>  
                 )}
             </div>
         </div>
