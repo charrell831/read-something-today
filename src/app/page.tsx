@@ -5,8 +5,9 @@ import NavigationBar from "./components/navBar";
 import { useRouter } from 'next/navigation';
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { ReadingTopics } from "./readings";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReadingDisplay from "./components/readingDisplay";
+import { data } from "./lib/data";
 
 function indexGenerator() {
   const index = Math.floor(Math.random()*Readings().length)
@@ -35,21 +36,35 @@ function findTopics(topic: string) {
   return [Math.floor(Math.random()*topicList.length), topicList]
 }
 
+
+
 export default function Page() {
   const router = useRouter();
   const index = indexGenerator()
   const [isTopicPicked, setIsTopicPicked] = useState(false)
   const [readingType, setReadingType] = useState('')
   const [readingTopicsList] = [ReadingTopics]
+  const [readings, setReadings] = useState([])
+
   function handleOnClick(readingType: string) {
       setIsTopicPicked(true);
       setReadingType(readingType)
   }
+  
+  // useEffect(()=> {
+  //   const fetchData = async() => {
+  //     const latestReadings = (await data()).articles;
+  //     console.log(typeof(latestReadings))
+  //     setReadings(latestReadings)
+  //   }
+  //   console.log(readings)
+  //   fetchData();
+  // }, [])
   return (
     <div>
       <NavigationBar/>
       <br />
-      <div className="flex justify-center">
+      <div className="flex justify-center md:max-w-2xl">
         <Dropdown className="bg-slate-500">
         <DropdownTrigger>
           <button 

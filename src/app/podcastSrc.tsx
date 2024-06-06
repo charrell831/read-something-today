@@ -46,5 +46,11 @@ export const podcastSrcs = [
         podLink: 'https://open.spotify.com/embed/episode/5JkSLMjW0oupSmnHsUnMt4?utm_source=generator',
         title: 'The incredible story of trans revolutionary Sylvia Rivera',
         type: ReadingTopics.LGBTQIA
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/6GS6cx7ZfifnGxwo649PQi?utm_source=generator',
+        title: 'The Democratic Republic of the Congo: A Modern Day Genocide',
+        type: ReadingTopics.CONGO
     }
+
 ]
