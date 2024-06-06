@@ -5,9 +5,8 @@ import NavigationBar from "./components/navBar";
 import { useRouter } from 'next/navigation';
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { ReadingTopics } from "./readings";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ReadingDisplay from "./components/readingDisplay";
-import { data } from "./lib/data";
 
 function indexGenerator() {
   const index = Math.floor(Math.random()*Readings().length)
