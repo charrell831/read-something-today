@@ -79,9 +79,6 @@ export default function Page() {
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.PALESTINE)}>
               {ReadingTopics.PALESTINE}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
-              {ReadingTopics.RACIAL_JUSTICE}
-            </DropdownItem>
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)}>
               {ReadingTopics.SUDAN}
             </DropdownItem>
