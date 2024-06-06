@@ -63,7 +63,7 @@ export default function Page() {
     <div>
       <NavigationBar/>
       <br />
-      <div className="flex justify-center md:max-w-2xl">
+      <div className="flex justify-center">
         <Dropdown className="bg-slate-500">
         <DropdownTrigger>
           <button 
@@ -81,9 +81,6 @@ export default function Page() {
             </DropdownItem>
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
               {ReadingTopics.RACIAL_JUSTICE}
-            </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)}>
-              {ReadingTopics.CONGO}
             </DropdownItem>
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)}>
               {ReadingTopics.SUDAN}
