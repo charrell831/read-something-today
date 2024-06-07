@@ -22,16 +22,16 @@ export default function NavigationBar() {
                         </button>
                     </DropdownTrigger>  
                     <DropdownMenu aria-label="Dynamic Actions">
-                        <DropdownItem onClick={() => router.push('/')}>
+                        <DropdownItem onClick={() => router.push('/')} className="cursor-pointer">
                             Home
                         </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/about')}>
+                        <DropdownItem onClick={()=> router.push('/about')} className="cursor-pointer">
                             About
                         </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/podcasts')}>
+                        <DropdownItem onClick={()=> router.push('/podcasts')} className="cursor-pointer">
                             Podcasts
                         </DropdownItem>
-                        <DropdownItem onClick={() => router.push('/donationhub')}>
+                        <DropdownItem onClick={() => router.push('/donationhub')} className="cursor-pointer">
                             Donation Hub
                         </DropdownItem>
                     </DropdownMenu>
