@@ -12,7 +12,6 @@ export default function NavigationBar() {
     return (
         <div>
            { isPhone ? (  
-            <div>
                 <Dropdown className="bg-slate-500">
                     <DropdownTrigger>
                         <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -22,7 +21,7 @@ export default function NavigationBar() {
                         </button>
                     </DropdownTrigger>  
                     <DropdownMenu aria-label="Dynamic Actions">
-                        <DropdownItem onClick={() => router.push('/')} className="cursor-pointer">
+                        <DropdownItem onClick={() => router.push('/')} onTouchStart={() => router.push('/')}>
                             Home
                         </DropdownItem>
                         <DropdownItem onClick={()=> router.push('/about')} className="cursor-pointer">
@@ -36,9 +35,8 @@ export default function NavigationBar() {
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
-            </div>
            ) : (
-            <Navbar className="bg-black **nav.scrolled { @apply shadow-2xl; border-bottom: 0px; }">
+                <Navbar className="bg-black **nav.scrolled { @apply shadow-2xl; border-bottom: 0px; }">
                     <NavbarContent justify="center">
                         <NavbarItem>
                             <Button 

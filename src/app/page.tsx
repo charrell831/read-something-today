@@ -109,9 +109,9 @@ export default function Page() {
         <ReadingDisplay readingObject={Readings()[index]}/>
       )}
       <br />
-
-      {/* <div className="flex justify-center">
-        <h1 className="pt-6 mb-4 flex justify-center text-3xl font-extrabold leading-none tracking-tight text-gray-900 xsm:text-1xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
+{/* 
+      <div className="flex justify-center">
+        <h1 className="pt-6 mb-4  text-3xl font-extrabold leading-none tracking-tight text-gray-900 xsm:text-1xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
           How it  &nbsp; <div className="text-red-500">works</div>:
         </h1>
         <br/>
