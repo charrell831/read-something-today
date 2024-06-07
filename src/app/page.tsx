@@ -95,7 +95,7 @@ export default function Page() {
       </h1>
       <br />
       <br />
-      <p className="flex justify-center text-3xl dark:text-white">
+      <p className="flex justify-center text-3xl xsm:text-1xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
         Spotlight Reading
       </p>
       <br />

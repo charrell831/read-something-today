@@ -17,13 +17,14 @@ const config: Config = {
       },
     },
     screens: {
-      'sm': '576px',
+      'xsm': {'min': '315px', 'max': '375px'},
+      'sm': {'min': '376px', 'max': '576px'},
       // => @media (min-width: 576px) { ... }
 
-      'md': '960px',
+      'md': {'min': '577px', 'max': '960px'},
       // => @media (min-width: 960px) { ... }
 
-      'lg': '1440px',
+      'lg': {'min':'961px', 'max': '1440px'},
       // => @media (min-width: 1440px) { ... }
     },
   },
