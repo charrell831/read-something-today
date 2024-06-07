@@ -6,7 +6,11 @@
  export default function DonationHub () {
 //     //add comment section and pending note for added readings
      return (
-        <></>
+        <>
+          <h1 className="pt-6 mb-4 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                Coming &nbsp; <div className="text-red-500"> Soon</div>.
+            </h1>
+        </>
 //         <div>
 //             <NavigationBar />
 //             <h1 className="pr-4 pl-4 pt-6 mb-4 flex text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">

@@ -60,7 +60,7 @@ export default function Page() {
   //   fetchData();
   // }, [])
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <NavigationBar/>
       <br />
       <div className="flex justify-center">
