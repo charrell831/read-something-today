@@ -7,7 +7,7 @@ export default function ReadingDisplay(readingObject: any) {
     const router = useRouter();
     return (
         <div className="flex h-[100] pt-0">
-        <div className="m-auto py-4 h-300 w-75% bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="m-auto py-4 h-300 w-3/4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <Link href={readingObject.readingObject.articleLink}>
             <div className="pr-4 pl-4 flex justify-center">
               <iframe width="600" height="400" src={readingObject.readingObject.articleLink} />
