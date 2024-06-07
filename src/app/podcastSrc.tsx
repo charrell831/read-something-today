@@ -51,6 +51,10 @@ export const podcastSrcs = [
         podLink: 'https://open.spotify.com/embed/episode/6GS6cx7ZfifnGxwo649PQi?utm_source=generator',
         title: 'The Democratic Republic of the Congo: A Modern Day Genocide',
         type: ReadingTopics.CONGO
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/1wZBGIbvw7I8GSPG5bDX50?utm_source=generator',
+        title: 'Technology and Race with Ruha Benjamin',
+        type: ReadingTopics.RACIAL_JUSTICE
     }
-
 ]

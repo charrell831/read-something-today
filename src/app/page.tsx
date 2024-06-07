@@ -61,7 +61,9 @@ export default function Page() {
   // }, [])
   return (
     <div className="overflow-x-hidden">
-      <NavigationBar/>
+      <div className="sticky top-0 z-50">
+        <NavigationBar/>
+      </div>
       <br />
       <div className="flex justify-center">
         <Dropdown className="bg-slate-500">

@@ -7,7 +7,7 @@ import NavigationBar from "../components/navBar";
 export default function AllPodcasts () {
     //add comment section and pending note for added readings
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <body className="bg-black ">
             <NavigationBar />
                 <h1 className="pr-4 pl-4 pt-6 mb-4 flex text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">

@@ -17,6 +17,7 @@ const config: Config = {
       },
     },
     screens: {
+      //navbar only shows for small
       'xsm': {'min': '315px', 'max': '375px'},
       'sm': {'min': '376px', 'max': '576px'},
       // => @media (min-width: 576px) { ... }
