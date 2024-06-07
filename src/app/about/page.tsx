@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 
 export default function About() {
     return (
-        <div className="bg-black">
+        <div className="overflow-x-hidden bg-black">
             <NavigationBar />
             <h1 className="pt-6 mb-4 flex text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                 Welcome.
