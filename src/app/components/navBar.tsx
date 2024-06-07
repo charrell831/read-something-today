@@ -24,13 +24,13 @@ export default function NavigationBar() {
                         <DropdownItem onClick={() => router.push('/')} onTouchStart={() => router.push('/')}>
                             Home
                         </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/about')} className="cursor-pointer">
+                        <DropdownItem onClick={()=> router.push('/about')} onTouchStart={() => router.push('/about')}>
                             About
                         </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/podcasts')} className="cursor-pointer">
+                        <DropdownItem onClick={()=> router.push('/podcasts')} onTouchStart={() => router.push('/podcasts')}>
                             Podcasts
                         </DropdownItem>
-                        <DropdownItem onClick={() => router.push('/donationhub')} className="cursor-pointer">
+                        <DropdownItem onClick={() => router.push('/donationhub')} onTouchStart={() => router.push('/donationhub')}>
                             Donation Hub
                         </DropdownItem>
                     </DropdownMenu>

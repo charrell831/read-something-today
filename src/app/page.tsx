@@ -76,16 +76,16 @@ export default function Page() {
           </button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Dynamic Actions">
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.LGBTQIA)} className="cursor-pointer">
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.LGBTQIA)} onTouchStart={() => handleOnClick(ReadingTopics.LGBTQIA)}>
               {ReadingTopics.LGBTQIA}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.PALESTINE)} className="cursor-pointer">
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.PALESTINE)} onTouchStart={() => handleOnClick(ReadingTopics.PALESTINE)}>
               {ReadingTopics.PALESTINE}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)} className="cursor-pointer">
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)} onTouchStart={() => handleOnClick(ReadingTopics.SUDAN)}>
               {ReadingTopics.SUDAN}
             </DropdownItem>
-            <DropdownItem onClick={() => router.push('/allreadings')} className="cursor-pointer">
+            <DropdownItem onClick={() => router.push('/allreadings')} onTouchStart={() => router.push('/allreadings')}>
               All Readings
             </DropdownItem>
         </DropdownMenu>
