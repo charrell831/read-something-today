@@ -90,7 +90,7 @@ export default function Page() {
       
       </div> 
        
-      <h1 className="pt-6 mb-4 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+      <h1 className="pt-6 mb-4 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 xsm:text-2xl sm:text-3xl md:text-5xl lg:text-6xl dark:text-white">
         Read Something  &nbsp; <div className="text-red-500">Today</div>.
       </h1>
       <br />
