@@ -61,22 +61,22 @@ export default function PodcastDisplay() {
           </button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Dynamic Actions">
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.LGBTQIA)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.LGBTQIA)} onTouchStart={() => handleOnClick(ReadingTopics.LGBTQIA)}>
               {ReadingTopics.LGBTQIA}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.PALESTINE)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.PALESTINE)} onTouchStart={() => handleOnClick(ReadingTopics.PALESTINE)}>
               {ReadingTopics.PALESTINE}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)} onTouchStart={() => handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
               {ReadingTopics.RACIAL_JUSTICE}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)} onTouchStart={() => handleOnClick(ReadingTopics.SUDAN)}>
               {ReadingTopics.SUDAN}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
               {ReadingTopics.CONGO}
             </DropdownItem>
-            <DropdownItem onClick={() => router.push('/allpodcasts')}>
+            <DropdownItem onClick={() => router.push('/allpodcasts')} onTouchStart={() => router.push('/allpodcasts')}>
               All Podcasts
             </DropdownItem>
         </DropdownMenu>
