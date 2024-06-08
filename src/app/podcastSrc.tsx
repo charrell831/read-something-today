@@ -28,6 +28,11 @@ export const podcastSrcs = [
         type: ReadingTopics.RACIAL_JUSTICE
     },
     {
+        podLink: 'https://open.spotify.com/embed/episode/1wZBGIbvw7I8GSPG5bDX50?utm_source=generator',
+        title: 'Technology and Race with Ruha Benjamin',
+        type: ReadingTopics.RACIAL_JUSTICE
+    },
+    {
         podLink: 'https://open.spotify.com/embed/episode/40gdtCyAHYSJ58l3cyTKim?utm_source=generator',
         title: 'The new war in Sudan',
         type: ReadingTopics.SUDAN
@@ -48,13 +53,13 @@ export const podcastSrcs = [
         type: ReadingTopics.LGBTQIA
     },
     {
+        podLink: 'https://open.spotify.com/embed/episode/30vQLUmWZE3vClp3LrdFmB?utm_source=generator',
+        title: 'All The Only Ones: The Missing Piece Of The Puzzle',
+        type: ReadingTopics.LGBTQIA
+    },
+    {
         podLink: 'https://open.spotify.com/embed/episode/6GS6cx7ZfifnGxwo649PQi?utm_source=generator',
         title: 'The Democratic Republic of the Congo: A Modern Day Genocide',
         type: ReadingTopics.CONGO
     },
-    {
-        podLink: 'https://open.spotify.com/embed/episode/1wZBGIbvw7I8GSPG5bDX50?utm_source=generator',
-        title: 'Technology and Race with Ruha Benjamin',
-        type: ReadingTopics.RACIAL_JUSTICE
-    }
 ]

@@ -12,6 +12,16 @@ export default function About() {
                 This website was created with the intention of educating those with a willingness to learn.
                 I believe that education is an essential tool in the fight for liberation and this website is (hopefully) a tool
                 that will assist people in doing so.
+            </p >
+                <br />
+            <h2 className="italic px-20 pt-6 mb-4 flex text-1xl font-extrabold leading-none tracking-tight text-gray-900 xsm:text-1xl sm:text-1xl md:text-2xl lg:text-3xl dark:text-white">
+                    How does it  &nbsp; <div className="text-red-500">work</div>?
+            </h2>
+            <p className="px-20 flex justify-center">
+                Each time you load this site, a reading or podcast will be randomly suggested to you. If you'd like to 
+                read or listen to a reading or podcast that aligns with a topic, you can click the 'Topics' button, select
+                whichever subject you'd prefer to learn more about and the site will randomly suggest a reading/podcast 
+                that aligns with your choice.
                 <br />
                 <br />
                 <br />
