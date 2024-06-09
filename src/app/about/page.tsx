@@ -1,5 +1,6 @@
 import NavigationBar from "../components/navBar";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image'
 
 export default function About() {
     return (
@@ -19,9 +20,10 @@ export default function About() {
             </h2>
             <p className="px-20 flex justify-center">
                 Each time you load this site, a reading or podcast will be randomly suggested to you. If you'd like to 
-                read or listen to a reading or podcast that aligns with a topic, you can click the 'Topics' button, select
+                read or listen to something that aligns with a specific topic, you can click the 'Topics' button, select
                 whichever subject you'd prefer to learn more about and the site will randomly suggest a reading/podcast 
                 that aligns with your choice.
+         
                 <br />
                 <br />
                 <br />
@@ -36,6 +38,11 @@ export default function About() {
                 <br />
                 <br />
                 Thank you.
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </p>
         </div>
     );
