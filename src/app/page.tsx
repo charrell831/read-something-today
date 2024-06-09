@@ -85,6 +85,12 @@ export default function Page() {
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)} onTouchStart={() => handleOnClick(ReadingTopics.SUDAN)}>
               {ReadingTopics.SUDAN}
             </DropdownItem>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)} onTouchStart={() => handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
+              {ReadingTopics.RACIAL_JUSTICE}
+            </DropdownItem>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
+              {ReadingTopics.CONGO}
+            </DropdownItem>
             <DropdownItem onClick={() => router.push('/allreadings')} onTouchStart={() => router.push('/allreadings')}>
               All Readings
             </DropdownItem>

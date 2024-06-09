@@ -21,6 +21,9 @@ export default function ReadingDisplay(readingObject: any) {
             <h4 className="pr-4 pl-4 mb-3 font-normal text-gray-700 dark:text-gray-400">
               {readingObject.readingObject.author}
             </h4>
+            <h3 className="italic pr-4 pl-4 mb-3 font-normal text-gray-700 dark:text-gray-400">
+              ({readingObject.readingObject.type})
+            </h3>
           </Link>
           {/* <div className="pr-80 pl-80 content-center">
             <button 

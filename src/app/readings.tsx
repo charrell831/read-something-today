@@ -58,6 +58,33 @@ function Readings() {
             author: 'Dr. Abuelgasim Gour Translated by Nassir al-Sayeid al-Nour',
             type: ReadingTopics.SUDAN
         },
+        {
+            articleLink: 'https://nhcje.org/blog/marsha-p-johnson-the-transgender-activist-who-pioneered-the-fight-for-lgbtq-rights',
+            title: 'Marsha P. Johnson: The Transgender Activist Who Pioneered the Fight for LGBTQ+ Rights',
+            author: 'New Hampshire Center for Justice & Equity',
+            type: ReadingTopics.LGBTQIA
+        },
+        {
+            articleLink: 'https://www.theatlantic.com/magazine/archive/2018/02/trayvon-martin-martin-luther-king-jr/552596/',
+            title: 'Martin Luther King Jr. Mourns Trayvon Martin',
+            author: 'Lauren K. Alleyne',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://kinginstitute.stanford.edu/king-papers/documents/our-struggle',
+            title: 'Our Struggle',
+            author: 'King, Martin Luther, Jr. (Montgomery Improvement Association)',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://www.amnesty.org/en/location/africa/east-africa-the-horn-and-great-lakes/democratic-republic-of-the-congo/report-democratic-republic-of-the-congo/',
+            title: 'DEMOCRATIC REPUBLIC OF THE CONGO',
+            author: 'Amnesty International',
+            type: ReadingTopics.CONGO
+        },
+        
+        
+        
     ]
     return readings;
 }

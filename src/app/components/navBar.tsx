@@ -24,15 +24,16 @@ export default function NavigationBar() {
                         <DropdownItem onClick={() => router.push('/')} onTouchStart={() => router.push('/')}>
                             Home
                         </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/about')} onTouchStart={() => router.push('/about')}>
-                            About
-                        </DropdownItem>
                         <DropdownItem onClick={()=> router.push('/podcasts')} onTouchStart={() => router.push('/podcasts')}>
                             Podcasts
                         </DropdownItem>
-                        <DropdownItem onClick={() => router.push('/donationhub')} onTouchStart={() => router.push('/donationhub')}>
-                            Donation Hub
+                        <DropdownItem onClick={()=> router.push('/about')} onTouchStart={() => router.push('/about')}>
+                            About
                         </DropdownItem>
+                        
+                        {/* <DropdownItem onClick={() => router.push('/donationhub')} onTouchStart={() => router.push('/donationhub')}>
+                            Donation Hub
+                        </DropdownItem> */}
                     </DropdownMenu>
                 </Dropdown>
            ) : (
@@ -49,19 +50,20 @@ export default function NavigationBar() {
                         <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                                onClick={() => router.push('/about')}
-                            >
-                                About
-                            </Button>
-                        </NavbarItem>
-                        <NavbarItem>
-                            <Button 
-                                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
                                 onClick={() => router.push('/podcasts')}
                             >
                                 Podcasts
                             </Button>
                         </NavbarItem>
+                        <NavbarItem>
+                            <Button 
+                                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
+                                onClick={() => router.push('/about')}
+                            >
+                                About
+                            </Button>
+                        </NavbarItem>
+                        
                         {/* <NavbarItem>
                             <Button 
                             className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"
@@ -70,14 +72,14 @@ export default function NavigationBar() {
                             Add Something
                             </Button>
                         </NavbarItem> */}
-                        <NavbarItem>
+                        {/* <NavbarItem>
                             <Button 
                             className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
                             onClick={() => router.push('/donationhub')}
                             >
                                 Donation Hub
                             </Button>
-                        </NavbarItem>
+                        </NavbarItem> */}
                     </NavbarContent>
                 </Navbar>
             )}
