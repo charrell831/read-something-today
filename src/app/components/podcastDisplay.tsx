@@ -2,7 +2,6 @@ import useMediaQuery from "../useMedia"
 
 export default function PodcastDisplayComponent(podcastObject: any) {
     let isPhone = useMediaQuery("(max-width: 576px)")
-    console.log(isPhone)
     return (
         <div>
         {isPhone ? (
