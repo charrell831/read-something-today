@@ -59,11 +59,18 @@ function Readings() {
             type: ReadingTopics.SUDAN
         },
         {
-            articleLink: 'https://nhcje.org/blog/marsha-p-johnson-the-transgender-activist-who-pioneered-the-fight-for-lgbtq-rights',
-            title: 'Marsha P. Johnson: The Transgender Activist Who Pioneered the Fight for LGBTQ+ Rights',
-            author: 'New Hampshire Center for Justice & Equity',
+            articleLink: 'https://wams.nyhistory.org/growth-and-turmoil/growing-tensions/marsha-p-johnson/',
+            title: 'Life Story: Marsha P. Johnson (1945-1992)',
+            author: 'Women & The American Story',
             type: ReadingTopics.LGBTQIA
         },
+        {
+            articleLink: 'https://www.nps.gov/articles/000/marsha-p-johnson-sylvia-rivera.htm',
+            title: 'Marsha P. Johnson & Sylvia Rivera',
+            author: 'Alexandra Burgos for NPS Cultural Landscapes Program',
+            type: ReadingTopics.LGBTQIA
+        },
+
         {
             articleLink: 'https://www.theatlantic.com/magazine/archive/2018/02/trayvon-martin-martin-luther-king-jr/552596/',
             title: 'Martin Luther King Jr. Mourns Trayvon Martin',
@@ -71,9 +78,27 @@ function Readings() {
             type: ReadingTopics.RACIAL_JUSTICE
         },
         {
-            articleLink: 'https://kinginstitute.stanford.edu/king-papers/documents/our-struggle',
-            title: 'Our Struggle',
-            author: 'King, Martin Luther, Jr. (Montgomery Improvement Association)',
+            articleLink: 'https://wams.nyhistory.org/growth-and-turmoil/feminism-and-the-backlash/angela-davis/',
+            title: 'Life Story: Angela Davis (1944- )',
+            author: 'Women & The American Story',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://www.pbs.org/wgbh/pages/frontline/shows/race/interviews/davis.html',
+            title: 'Interview with Angela Davis',
+            author: 'PBS',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://www.nytimes.com/2021/03/15/technology/artificial-intelligence-google-bias.html',
+            title: 'Who Is Making Sure the A.I. Machines Aren\'t Racist?: ',
+            author: 'Cade Metz',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://www.bowdoin.edu/news/2023/11/scholar-ruha-benjamin.html',
+            title: 'Ruha Benjamin Reimagines Technology, Shares Ideas for Dismantling Discriminatory Design',
+            author: 'Bowdoin',
             type: ReadingTopics.RACIAL_JUSTICE
         },
         {
@@ -81,10 +106,7 @@ function Readings() {
             title: 'DEMOCRATIC REPUBLIC OF THE CONGO',
             author: 'Amnesty International',
             type: ReadingTopics.CONGO
-        },
-        
-        
-        
+        },     
     ]
     return readings;
 }

@@ -77,4 +77,10 @@ export const podcastSrcs = [
         title: 'The Democratic Republic of the Congo: A Modern Day Genocide',
         type: ReadingTopics.CONGO
     },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/7dWkvMO0eR8PuReRrVzVEi?utm_source=generator',
+        title: 'From Rubber Trade to Cultural Genocide: A History of Belgian Colonization in the Congo',
+        type: ReadingTopics.CONGO
+    },
+
 ]
