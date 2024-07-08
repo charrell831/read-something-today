@@ -5,13 +5,14 @@ export default function PodcastDisplayComponent(podcastObject: any) {
     return (
         <div>
         {isPhone ? (
-            <div className="justify-center flex">
+        <div className="justify-center flex">
             <iframe className="border-radius:12px" 
                 src={podcastObject.podcastObject.podLink}
                 width="75%" 
                 height="600"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">     
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">  
             </iframe>
+            
         </div>
         ):(
             
@@ -21,7 +22,9 @@ export default function PodcastDisplayComponent(podcastObject: any) {
                 width="50%" 
                 height="352" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    
             </iframe>
+            
         </div>
         )}   
         </div>

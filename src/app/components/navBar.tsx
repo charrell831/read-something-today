@@ -4,14 +4,18 @@ import {Navbar, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import { useRouter } from 'next/navigation';
 import useMediaQuery from "../useMedia";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
+import { useAuth } from "../contexts/AuthContents";
 
 export default function NavigationBar() {
     const router = useRouter();
     let isPhone = useMediaQuery("(max-width: 576px)")
+    //const { user } = useAuth();
+    //let signInOrEmail = user ? user?.email : "Sign In"
+
 
     return (
         <div>
-           { isPhone ? (  
+           { isPhone ? (     
                 <Dropdown className="bg-slate-500">
                     <DropdownTrigger>
                         <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -40,6 +44,16 @@ export default function NavigationBar() {
                 <Navbar className="bg-black **nav.scrolled { @apply shadow-2xl; border-bottom: 0px; }">
                     <NavbarContent justify="center">
                         <NavbarItem>
+                            {/* <Button 
+                                type="button" 
+                                className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 text-white focus:ring-gray-300 dark:focus:ring-gray-600" 
+                                id="user-menu-button" 
+                                aria-expanded="false"
+                                onClick={() =>  '/auth'}>
+                                Sign In 
+                            </Button> */}
+                        </NavbarItem>
+                        <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white font-bold"  
                                 onClick={() => router.push('/')}
@@ -63,6 +77,14 @@ export default function NavigationBar() {
                                 About
                             </Button>
                         </NavbarItem>
+                        {/* <NavbarItem>
+                            <Button 
+                                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
+                                onClick={() => router.push('/authorsCorner')}
+                            >
+                                Author's Corner
+                            </Button>
+                        </NavbarItem> */}
                         
                         {/* <NavbarItem>
                             <Button 
