@@ -4,7 +4,7 @@ import {Navbar, NavbarContent, NavbarItem, Button} from "@nextui-org/react";
 import { useRouter } from 'next/navigation';
 import useMediaQuery from "../useMedia";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
-import { useAuth } from "../contexts/AuthContents";
+//import { useAuth } from "../contexts/AuthContents";
 
 export default function NavigationBar() {
     const router = useRouter();
