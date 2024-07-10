@@ -17,7 +17,7 @@ export default function ReadingDisplay(readingObject: any) {
           )}
           <Link href={readingObject.readingObject.articleLink}>
             <div className="pr-4 pl-4 flex justify-center">
-              <iframe width="100%" height="400" src={readingObject.readingObject.articleLink} />
+              <iframe width="100%" height="500" src={readingObject.readingObject.articleLink} />
             </div>
             <br />
             <br />

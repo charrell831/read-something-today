@@ -51,15 +51,6 @@ export default function Page() {
       setReadingType(readingType)
   }
   
-  // useEffect(()=> {
-  //   const fetchData = async() => {
-  //     const latestReadings = (await data()).articles;
-  //     console.log(typeof(latestReadings))
-  //     setReadings(latestReadings)
-  //   }
-  //   console.log(readings)
-  //   fetchData();
-  // }, [])
   return (
     <div className="overflow-x-hidden">
       <div className="sticky top-0 z-50">
@@ -90,6 +81,9 @@ export default function Page() {
             </DropdownItem>
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
               {ReadingTopics.CONGO}
+            </DropdownItem>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.EDUCATION)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
+              {ReadingTopics.EDUCATION}
             </DropdownItem>
             <DropdownItem onClick={() => router.push('/allreadings')} onTouchStart={() => router.push('/allreadings')}>
               All Readings
