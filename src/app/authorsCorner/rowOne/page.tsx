@@ -22,7 +22,7 @@ async function statementSelected(statement: string) {
     });
 }
 
-export default function RowOne() {
+export default function RowOne(author: string) {
     <>
         <Button 
             className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
