@@ -12,7 +12,6 @@ export default function NavigationBar() {
     //const { user } = useAuth();
     //let signInOrEmail = user ? user?.email : "Sign In"
 
-
     return (
         <div>
            { isPhone ? (     

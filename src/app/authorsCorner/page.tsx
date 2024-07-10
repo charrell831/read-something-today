@@ -1,32 +1,20 @@
 'use client';
 
-import axios from 'axios';
-import { useAuthorStore } from '../authorTree';
 import { Button } from "@nextui-org/react";
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 const url = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
   : "http://localhost:3000/api";
 
 async function authorSelected(author: string) {
-    // if (author === 'James Baldwin') {
-    //     await fetch(`${url}/baldwinTree/`).then((data)=>{});
-        
-    // }
-        fetch(`${url}/baldwinTree/`)
+        const children = [] as any[]
+        fetch(`${url}/${author}/`)
           .then((res) => {
             return res.json();
           })
           .then((data) => {
-            console.log(data.statment);
-            return (
-                <>
-                    hi
-                        {data.statment}
-                </>
-            )
+            children.push(data.child)
+            return children
           });
 }
 
@@ -35,7 +23,7 @@ export default function AuthorsCorner() {
         <>
             <Button 
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                onClick={() => {authorSelected('James Baldwin')}}
+                onClick={() => {authorSelected('baldwinTree')}}
             >
                 James Baldwin
             </Button>
