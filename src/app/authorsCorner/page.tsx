@@ -1,8 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-
-import { Button } from "@nextui-org/react";
 import AuthorProfile from './components/authorProfile';
 import NavigationBar from '../components/navBar';
 import { createContext, useContext, useState } from 'react';
@@ -13,7 +10,6 @@ export type AuthorType = {
     imageSrc: string;
 }
 
-export const AuthorContext = createContext<AuthorType | null>(null);
 
 
 // const url = process.env.NEXT_PUBLIC_VERCEL_URL
