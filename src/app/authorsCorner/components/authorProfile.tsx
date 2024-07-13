@@ -9,7 +9,7 @@ import Link from 'next/link'
 export default function AuthorProfile({authorType}: {authorType: AuthorType}) {
     const data = authorType
     let pathname = usePathname();
-    console.log(pathname)
+    
     return (
         <>
         <Link
@@ -19,23 +19,11 @@ export default function AuthorProfile({authorType}: {authorType: AuthorType}) {
             }}
             >
             <img 
-                    className="rounded-full m-auto" 
-                    src={data.imageSrc}
-                    width={200}
-                    height={200}/>   
+                className="rounded-full m-auto" 
+                src={data.imageSrc}
+                width={200}
+                height={200}/>   
         </Link>
-            {/* <button 
-                className="transition ease-in-out delay-150"
-                onClick={() => router.push(
-                    '/rowOne', data
-                )}
-            >
-                <img 
-                    className="rounded-full m-auto" 
-                    src={authorType.imageSrc}
-                    width={200}
-                    height={200}/>
-            </button> */}
         </>
     )
 }

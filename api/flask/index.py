@@ -35,6 +35,10 @@ def baldwinTree():
 def getChild(root, index): 
     return root.child[index].toJSON()
 
+@app.route('/api/displayRow', methods=['GET'])
+def getRow(node):
+    if (node.child != None):
+        return node.child.toJSON()
 
 @app.route('/api/displayLevel', methods=['GET'])
 def displayLevel(row, root):

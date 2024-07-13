@@ -35,7 +35,6 @@ export const AuthorContext = createContext<AuthorType | null>(null);
 
 
 export default function AuthorsCorner() {
-    const router = useRouter();
     return (
         <>
             <NavigationBar />
