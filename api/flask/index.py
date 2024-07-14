@@ -32,9 +32,6 @@ def baldwinTree():
     (root.child[1].child).append(Node('I want a one stop shop'))
     return root.toJSON()
 
-def getChild(root, index): 
-    return root.child[index].toJSON()
-
 @app.route('/api/displayRow', methods=['GET'])
 def getRow(node):
     if (node.child != None):

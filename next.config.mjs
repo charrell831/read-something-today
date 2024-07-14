@@ -14,20 +14,16 @@ const nextConfig = {
         ]
     },
 
-    async headers() {
+      async redirects() {
         return [
           {
-            source: '/:all*(svg|jpg|png)',
-            locale: false,
-            headers: [
-              {
-                key: 'Cache-Control',
-                value: 'max-age=604800',
-              }
-            ],
+            source: '/about',
+            destination: '/',
+            permanent: true,
           },
         ]
       },
+
 };
 
 
