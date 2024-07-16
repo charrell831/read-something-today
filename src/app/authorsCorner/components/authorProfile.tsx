@@ -21,7 +21,7 @@ export default function AuthorProfile({authorType}: {authorType: AuthorType}) {
             >
             <Image 
                 className="rounded-full m-auto" 
-                src={data.imageSrc}
+                src={'/' + data.imageSrc}
                 width={200}
                 height={200}
                 alt={data.authorName} 
