@@ -10,17 +10,7 @@ import ReactDOMServer from 'react-dom/server'
 let statement = ''
 let row: any[] = []
 
-function useSearch(searchProperty: string) {
-    return (
-        ReactDOMServer.renderToString(
-            <Suspense>
-                {useSearchParams().get(searchProperty)}
-            </Suspense>
-        )
-    )
-}
-
-export default function RowOne() {
+function AuthorTreeComponent() {
     useEffect(() => {
         async function statementSelected() {
             const url = process.env.NEXT_PUBLIC_VERCEL_URL
@@ -40,9 +30,9 @@ export default function RowOne() {
         .catch(console.error);
     }, [])
 
-    const imageSrc = useSearch('imageSrc')
+    const imageSrc = useSearchParams().get('imageSrc')
     let pathname = usePathname();
-
+    
     return (
         <>
             <NavigationBar />
@@ -55,7 +45,7 @@ export default function RowOne() {
                 src={"/"+imageSrc}
                 width={300}
                 height={300}
-                alt={"photo of " + useSearch('authorName')}
+                alt={"photo of " + ReactDOMServer.renderToString(useSearchParams().get('authorName'))}
             /> 
             <br /> 
             <div className="text-2xl text-center">
@@ -67,7 +57,7 @@ export default function RowOne() {
                         <Link 
                             className="px-6 py-5 w-full m-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" 
                             //children being past in url is messed up
-                            href={{pathname: pathname + '/rowTwo', query: {statement: r.statment, child: JSON.stringify(r.child), imageSrc: imageSrc}}}
+                            href={{pathname: pathname + '/rowTwo', query: {statement: r.statment, child: JSON.stringify(r.child), imageSrc: ReactDOMServer.renderToString(imageSrc)}}}
                             key={r.statment}
                         >
                             <div className='text-center'>
@@ -76,7 +66,7 @@ export default function RowOne() {
                         </Link>
                     )
                 })}
-            </div> 
+            </div>
             <br />
             <br />
             <br />
@@ -108,7 +98,17 @@ export default function RowOne() {
             <br />
             <br />
             <br />
-            <br />  
+            <br /> 
         </>
+    )
+}
+
+export default function RowOne() {
+    
+
+    return (
+            <Suspense>
+                <AuthorTreeComponent />
+            </Suspense>
     )  
 }

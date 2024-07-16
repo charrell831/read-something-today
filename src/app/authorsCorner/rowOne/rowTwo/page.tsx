@@ -11,17 +11,7 @@ let row: {}[] = []
 let node = {};
 let children: {}[] = []
 
-function useSearch(searchProperty: string) {
-    return (
-        ReactDOMServer.renderToString(
-            <Suspense>
-                {useSearchParams().get(searchProperty)}
-            </Suspense>
-        )
-    )
-}
-
-export default function RowTwo() {
+function AuthorTreeComponent() {
     useEffect(()=> {
         const url = process.env.NEXT_PUBLIC_VERCEL_URL
         ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
@@ -37,12 +27,12 @@ export default function RowTwo() {
         });
     }, [])
 
-    row.push(useSearch('child') as {}) 
-    statement = useSearch('statement')
+    row.push(ReactDOMServer.renderToString(useSearchParams().get('child')) as {}) 
+    statement = ReactDOMServer.renderToString(useSearchParams().get('statement'))
     node = {child: JSON.parse(row[0] as string), statment: statement}
 
-    const imageSrc = useSearch('imageSrc')
-    //console.log('node', node.statment)
+    const imageSrc = useSearchParams().get('imageSrc')
+
     return (
         <>
             <NavigationBar />
@@ -107,5 +97,15 @@ export default function RowTwo() {
             <br />
             <br />  
         </>
+    )
+}
+
+export default function RowTwo() {
+    
+    //console.log('node', node.statment)
+    return (
+        <Suspense>
+            <AuthorTreeComponent />
+        </Suspense>
     )  
 }
