@@ -25,7 +25,8 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
     "react-quill": "^2.0.0",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vercel": "^35.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
