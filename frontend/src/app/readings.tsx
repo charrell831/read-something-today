@@ -104,6 +104,18 @@ function Readings() {
             type: ReadingTopics.RACIAL_JUSTICE
         },
         {
+            articleLink: 'https://www.nbcbayarea.com/news/local/making-it-in-the-bay/oakland-affordable-housing/3594421/',
+            title: 'The Black Panther 100% Affordable Housing Project in Oakland',
+            author: 'NBC Bay Area staff',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
+            articleLink: 'https://www.archives.gov/research/african-americans/individuals/elaine-brown',
+            title: 'Elaine Brown (March 2, 1943)',
+            author: 'National Archives',
+            type: ReadingTopics.RACIAL_JUSTICE
+        },
+        {
             articleLink: 'https://www.amnesty.org/en/location/africa/east-africa-the-horn-and-great-lakes/democratic-republic-of-the-congo/report-democratic-republic-of-the-congo/',
             title: 'DEMOCRATIC REPUBLIC OF THE CONGO',
             author: 'Amnesty International',
