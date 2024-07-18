@@ -126,8 +126,7 @@ function Readings() {
             title: 'Multiplying Inequalities: The Effects of Race, Social Class, and Tracking on Opportunities to Learn Mathematics and Science.',
             author: 'Jeannie Oakes & Others',
             type: ReadingTopics.EDUCATION
-        },  
-        
+        } 
     ]
     return readings;
 }
