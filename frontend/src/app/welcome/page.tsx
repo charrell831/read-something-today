@@ -5,7 +5,7 @@ export default function Welcome() {
         <div className="overflow-x-hidden bg-black">
             <NavigationBar />
             <h1 className="px-40 pt-6 mb-4 flex text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                Welcome!
+                Welcome.
             </h1>
             <div>
             <p className="px-40 flex justify-center">
