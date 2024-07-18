@@ -122,23 +122,11 @@ function Readings() {
             type: ReadingTopics.CONGO
         },
         {
-            articleLink: 'https://www.amnesty.org/en/location/africa/east-africa-the-horn-and-great-lakes/democratic-republic-of-the-congo/report-democratic-republic-of-the-congo/',
-            title: 'DEMOCRATIC REPUBLIC OF THE CONGO',
-            author: 'Amnesty International',
-            type: ReadingTopics.CONGO
-        },
-        {
             articleLink: 'https://files.eric.ed.gov/fulltext/ED329615.pdf',
             title: 'Multiplying Inequalities: The Effects of Race, Social Class, and Tracking on Opportunities to Learn Mathematics and Science.',
             author: 'Jeannie Oakes & Others',
             type: ReadingTopics.EDUCATION
         },  
-        {
-            articleLink: 'https://files.eric.ed.gov/fulltext/ED329615.pdf',
-            title: 'Multiplying Inequalities: The Effects of Race, Social Class, and Tracking on Opportunities to Learn Mathematics and Science.',
-            author: 'Jeannie Oakes & Others',
-            type: ReadingTopics.EDUCATION
-        },     
         
     ]
     return readings;
