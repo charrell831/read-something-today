@@ -3,7 +3,7 @@
 import NavigationBar from "../components/navBar"
 import { podcastSrcs } from "../podcastSrc";
 import { useRouter } from 'next/navigation';
-import {Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { useState } from "react";
 import { ReadingTopics } from "../readings";
 import PodcastDisplayComponent from "../components/podcastDisplay";

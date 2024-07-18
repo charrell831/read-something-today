@@ -10,7 +10,6 @@ export default function NavigationBar() {
     const router = useRouter();
     let isPhone = useMediaQuery("(max-width: 576px)")
     //const { user } = useAuth();
-    //let signInOrEmail = user ? user?.email : "Sign In"
 
     return (
         <div>
@@ -71,7 +70,7 @@ export default function NavigationBar() {
                         <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                                onClick={() => router.push('/aboutPage')}
+                                onClick={() => {router.push('/welcome')}}
                             >
                                 About
                             </Button>
