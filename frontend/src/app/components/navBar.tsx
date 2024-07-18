@@ -71,7 +71,7 @@ export default function NavigationBar() {
                         <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                                onClick={() => router.push('/about')}
+                                onClick={() => router.push('/aboutPage')}
                             >
                                 About
                             </Button>
