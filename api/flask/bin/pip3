@@ -1,4 +1,4 @@
-#!/Users/camrynharrell/code/projects/resistance-learn/api/flask/bin/python
+#!/Users/camrynharrell/code/projects/resistance-learn/api/flask/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
