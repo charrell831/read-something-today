@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+from flask import request
 
 app = Flask(__name__)
 CORS(app)
@@ -30,14 +31,23 @@ def baldwinTree():
     (root.child[1].child).append(Node('I am overwhelmed'))
     (root.child[1].child).append(Node('I want my life to change'))
     (root.child[1].child).append(Node('I want a one stop shop'))
+    (root.child[0].child[0].child).append(Node('Read another author'))
+    (root.child[0].child[1].child).append(Node('If Beale Street Could Talk'))
+    (root.child[0].child[2].child).append(Node('Giovannis Room'))
     return root.toJSON()
 
 @app.route('/api/displayRow/', methods=['GET'])
-def getRow(node):
+def getRow():
+    child = request.args.get('child')
+    statment = request.args.get('statment')
+    node = Node(statment)
+    (node.child).append(child)
+    print('node', node)
     if (node.child != None):
-        return node.child.toJSON()
+        return node.child
+    return None
 
-@app.route('/api/displayLevel', methods=['GET'])
+@app.route('/api/displayLevel/', methods=['GET'])
 def displayLevel(row, root):
      if row == -1:
          return root.child

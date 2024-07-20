@@ -2,42 +2,29 @@
 
 import Image from 'next/image'
 import NavigationBar from "../../../components/navBar";
-import { useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react';
+import { useSearchParams, usePathname } from 'next/navigation'
 import ReactDOMServer from 'react-dom/server'
+import Link from 'next/link'
+
+type NodeType = {
+    child: [], 
+    statment: string
+}
 
 let statement = ''
 let row = [{}]
-let node = {};
-let children: {}[] = []
+let node : NodeType;
 
 function AuthorTreeComponent() {
-    console.log(typeof(node))
-    useEffect(()=> {
-        console.log(node)
-        const url = process.env.NEXT_PUBLIC_VERCEL_URL
-        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
-        : "http://localhost:3000/api";
-    
-        fetch(`${url}/displayRow/${node}`)
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            statement =  data.statment
-            children = data.child
-            console.log('data child', data.child)
-        });
-    }, [])
-
-    
     row.push(useSearchParams().get('child') as {})
     statement = ReactDOMServer.renderToString(useSearchParams().get('statement'))
 
-   
     node = {child: JSON.parse(row[1] as string), statment: statement}
-    
+ 
     const imageSrc = useSearchParams().get('imageSrc')
+    let pathname = usePathname();
+    const childListSize = node.child.length
 
     return (
         <>
@@ -57,16 +44,16 @@ function AuthorTreeComponent() {
             <div className="text-2xl text-center">
                 {statement}
             </div>
-            <div className="pt-12 px-12 grid grid-cols-2 gap-2 flex place-items-center">
-                {children.map((child)=> {
+            <div className={`pt-12 px-12 grid grid-cols-${childListSize} gap-2 flex place-items-center`}>
+                {node.child.map((nodeChild: NodeType)=> {
                     return (
-                        <button 
-                            className="px-6 py-5 w-full m-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" 
-                            onClick={() => {}}
+                        <Link 
+                            className="px-6 py-5 text-center w-full m-auto text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" 
+                            href={{pathname: pathname + '/rowThree', query: {statement: nodeChild.statment, child: JSON.stringify(nodeChild.child), imageSrc: ReactDOMServer.renderToString(imageSrc)}}}
                             key={0}
                         >
-                           {} 
-                        </button>
+                            {nodeChild.statment}
+                        </Link>
                     )
                 })}
             </div> 
