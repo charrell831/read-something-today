@@ -5,6 +5,7 @@ import ReactDOMServer from 'react-dom/server'
 import Image from 'next/image'
 import NavigationBar from '@/app/components/navBar'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 enum BookImage {
     IF_BEALE_COULD_TALK = 'ifbealestreetcouldtalk.jpg',
@@ -19,7 +20,7 @@ type NodeType = {
 let row = [{}]
 let node : NodeType;
 
-export default function RowThree() {
+function AuthorTreeComponent() {
     row.push(useSearchParams().get('child') as {})
     let statement = ReactDOMServer.renderToString(useSearchParams().get('statement'))
     let bookImage = '';
@@ -94,5 +95,13 @@ export default function RowThree() {
             <br />
             <br />  
         </>
+    )
+
+}
+export default function RowThree() {
+    return (
+        <Suspense>
+            <AuthorTreeComponent />
+        </Suspense>
     )
 }
