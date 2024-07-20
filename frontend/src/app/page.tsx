@@ -43,7 +43,7 @@ export default function Page() {
   const index = indexGenerator()
   const [isTopicPicked, setIsTopicPicked] = useState(false)
   const [readingType, setReadingType] = useState('')
-  const [readingTopicsList] = [ReadingTopics]
+  const readingTopicsList = [ReadingTopics]
   const [readings, setReadings] = useState([])
 
   function handleOnClick(readingType: string) {

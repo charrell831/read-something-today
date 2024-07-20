@@ -9,6 +9,7 @@ import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org
 export default function NavigationBar() {
     const router = useRouter();
     let isPhone = useMediaQuery("(max-width: 576px)")
+    const navMenu: {name:string, dir: string}[] = [{name: 'Home', dir: '/'}, {name: 'Podcasts', dir: '/podcasts'}, {name: 'Welcome', dir: '/welcome'}]
     //const { user } = useAuth();
 
     return (
@@ -22,20 +23,12 @@ export default function NavigationBar() {
                             </svg>
                         </button>
                     </DropdownTrigger>  
-                    <DropdownMenu aria-label="Dynamic Actions">
-                        <DropdownItem onClick={() => router.push('/')} onTouchStart={() => router.push('/')}>
-                            Home
-                        </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/podcasts')} onTouchStart={() => router.push('/podcasts')}>
-                            Podcasts
-                        </DropdownItem>
-                        <DropdownItem onClick={()=> router.push('/about')} onTouchStart={() => router.push('/about')}>
-                            About
-                        </DropdownItem>
-                        
-                        {/* <DropdownItem onClick={() => router.push('/donationhub')} onTouchStart={() => router.push('/donationhub')}>
-                            Donation Hub
-                        </DropdownItem> */}
+                    <DropdownMenu aria-label="Dynamic Actions" items={navMenu}>
+                        {(item) =>
+                            <DropdownItem key={item.name} onClick={() => router.push(item.dir)} onTouchStart={() => router.push(item.dir)}>
+                                {item.name}
+                            </DropdownItem>
+                        }
                     </DropdownMenu>
                 </Dropdown>
            ) : (
