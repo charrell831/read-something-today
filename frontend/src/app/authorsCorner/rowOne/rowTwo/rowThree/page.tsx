@@ -5,7 +5,7 @@ import ReactDOMServer from 'react-dom/server'
 import Image from 'next/image'
 import NavigationBar from '@/app/components/navBar'
 import Link from 'next/link'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 
 enum BookImage {
     IF_BEALE_COULD_TALK = 'ifbealestreetcouldtalk.jpg',
@@ -23,22 +23,25 @@ let node : NodeType;
 function AuthorTreeComponent() {
     row.push(useSearchParams().get('child') as {})
     let statement = ReactDOMServer.renderToString(useSearchParams().get('statement'))
-    let bookImage = '';
+    let bookImage = ''
     let pathname = ''
 
-    node = {child: JSON.parse(row[1] as string), statment: statement}
-    const nodeChild: NodeType = node.child.at(0)!
+    useEffect(()=> {
+            node = {child: JSON.parse(row[1] as string), statment: statement}
+            const nodeChild: NodeType = node.child.at(0)!
 
-    console.log('node', nodeChild?.statment)
-    statement = nodeChild?.statment
+            console.log('node', nodeChild?.statment)
+            statement = nodeChild?.statment
 
-    if (statement === 'If Beale Street Could Talk') {
-        bookImage = BookImage.IF_BEALE_COULD_TALK
-        pathname = 'https://thelittlebohobookshop.com/item/BCF_nhsWIAUyjvwRp5Kdig'
-    } else if (statement === 'Giovannis Room') {
-        bookImage = BookImage.GIOVANNIS_ROOM
-        pathname = 'https://rep.club/products/giovannis-room-deluxe?_pos=2&_sid=8e7295596&_ss=r'
-    }
+            if (statement === 'If Beale Street Could Talk') {
+                bookImage = BookImage.IF_BEALE_COULD_TALK
+                pathname = 'https://thelittlebohobookshop.com/item/BCF_nhsWIAUyjvwRp5Kdig'
+            } else if (statement === 'Giovannis Room') {
+                bookImage = BookImage.GIOVANNIS_ROOM
+                pathname = 'https://rep.club/products/giovannis-room-deluxe?_pos=2&_sid=8e7295596&_ss=r'
+            }
+    }, [])
+    
 
     return (
         <>
