@@ -23,6 +23,7 @@ function AuthorTreeComponent() {
     node = {child: JSON.parse(row[1] as string), statment: statement}
  
     const imageSrc = useSearchParams().get('imageSrc')
+    console.log(imageSrc)
     let pathname = usePathname();
     const childListSize = node.child.length
 

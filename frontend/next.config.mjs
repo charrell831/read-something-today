@@ -15,7 +15,7 @@ const nextConfig = {
               source: '/api/:path*',
               destination: 
               process.env.NODE_ENV === 'production'
-                  ? 'https://www.readsomethingtoday.com/api/:path*'
+                  ? 'https://resistance-learn-2ah16vtng-charrell831s-projects.vercel.app/api/:path*'
                   : '/api/',
           },
         ]
