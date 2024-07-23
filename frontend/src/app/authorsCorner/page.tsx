@@ -4,13 +4,12 @@ import AuthorProfile from './components/authorProfile';
 import NavigationBar from '../components/navBar';
 import { createContext, useContext, useState } from 'react';
 import { AuthorChoices } from './authors';
+import { Suspense } from 'react'
 
 export type AuthorType = {
     authorName: AuthorChoices;
     imageSrc: string;
 }
-
-
 
 // const url = process.env.NEXT_PUBLIC_VERCEL_URL
 //   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`

@@ -12,7 +12,7 @@ let row: any[] = []
 
 function AuthorTreeComponent() {
     useEffect(() => {
-        async function statementSelected() {
+        function statementSelected() {
             const url = process.env.NEXT_PUBLIC_VERCEL_URL
             ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
             : "http://localhost:3000/api";
@@ -27,7 +27,6 @@ function AuthorTreeComponent() {
             });
         }
         statementSelected()
-        .catch(console.error);
     }, [])
 
     const imageSrc = useSearchParams().get('imageSrc')
@@ -104,8 +103,6 @@ function AuthorTreeComponent() {
 }
 
 export default function RowOne() {
-    
-
     return (
             <Suspense>
                 <AuthorTreeComponent />
