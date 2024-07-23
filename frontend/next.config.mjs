@@ -8,7 +8,7 @@ const nextConfig = {
                 source: '/api/:path*',
                 destination: 
                 process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:5000/api/:path*' 
-                    : 'production' ? 'https://www.readsomethingtoday.com/api/:path*'
+                    : 'production' ? 'https://resistance-learn-l0fsftws1-charrell831s-projects.vercel.app/api/:path*'
                     : '/api/',
             },
           //   {
