@@ -118,6 +118,8 @@ function AuthorTreeComponent() {
 
 export default function RowOne() {
     return (
+            <Suspense>
                 <AuthorTreeComponent />
+            </Suspense>
     )  
 }
