@@ -13,7 +13,7 @@ let row: any[] = []
 
 function GetChildren() {
     const url = process.env.NEXT_PUBLIC_VERCEL_URL
-            ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
+            ? `https://www.readsomethingtoday.com/api`
             : "http://localhost:3000/api";
     axios.get(`${url}/baldwinTree`, {
         headers: {'Content-Type': 'text/plain', },
@@ -21,6 +21,8 @@ function GetChildren() {
         statement = res.data.statement
         row = res.data.child
         console.log(statement)
+    }).catch((error)=> {
+        console.error(error.response.data);
     })
 }
 function AuthorTreeComponent() {
