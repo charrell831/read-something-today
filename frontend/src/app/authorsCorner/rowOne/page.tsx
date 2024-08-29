@@ -6,29 +6,43 @@ import NavigationBar from "../../components/navBar";
 import Link from 'next/link'
 import { useEffect, Suspense } from 'react';
 import ReactDOMServer from 'react-dom/server'
+import axios from 'axios';
 
 let statement = ''
 let row: any[] = []
 
-function AuthorTreeComponent() {
-    useEffect(() => {
-        function statementSelected() {
-            const url = process.env.NEXT_PUBLIC_VERCEL_URL
+function GetChildren() {
+    const url = process.env.NEXT_PUBLIC_VERCEL_URL
             ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
             : "http://localhost:3000/api";
+    axios.get(`${url}/baldwinTree`, {
+        headers: {'Content-Type': 'text/plain', },
+    }).then((res)=> {
+        statement = res.data.statement
+        row = res.data.child
+        console.log(statement)
+    })
+}
+function AuthorTreeComponent() {
+    // useEffect(() => {
+    //     function statementSelected() {
+    //         const url = process.env.NEXT_PUBLIC_VERCEL_URL
+    //         ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
+    //         : "http://localhost:3000/api";
         
-            fetch(`${url}/baldwinTree/`)
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                statement =  data.statment
-                row = data.child
-            });
-        }
-        statementSelected()
-    }, [])
+    //         fetch(`${url}/baldwinTree/`)
+    //         .then((res) => {
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             statement =  data.statment
+    //             row = data.child
+    //         })
+    //     }
+    //     statementSelected()
+    // }, [])
 
+    GetChildren()
     const imageSrc = useSearchParams().get('imageSrc')
     let pathname = usePathname();
     
@@ -104,8 +118,6 @@ function AuthorTreeComponent() {
 
 export default function RowOne() {
     return (
-            <Suspense>
                 <AuthorTreeComponent />
-            </Suspense>
     )  
 }
