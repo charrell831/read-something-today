@@ -4,7 +4,7 @@ import { useSearchParams, usePathname } from 'next/navigation'
 import Image from 'next/image'
 import NavigationBar from "../../components/navBar";
 import Link from 'next/link'
-import { useEffect, Suspense } from 'react';
+import { Suspense } from 'react';
 import ReactDOMServer from 'react-dom/server'
 import axios from 'axios';
 
@@ -14,36 +14,19 @@ let row: any[] = []
 function GetChildren() {
     const url = process.env.NEXT_PUBLIC_VERCEL_URL
             ? `https://www.readsomethingtoday.com/api`
-            : "http://localhost:3000/api";
+            : `http://127.0.0.1:5000/api`;
     axios.get(`${url}/baldwinTree`, {
         headers: {'Content-Type': 'text/plain', },
     }).then((res)=> {
-        statement = res.data.statement
+        statement = res.data.statment
         row = res.data.child
-        console.log(statement)
+        console.log('statement', statement)
     }).catch((error)=> {
         console.error(error.response.data);
     })
 }
-function AuthorTreeComponent() {
-    // useEffect(() => {
-    //     function statementSelected() {
-    //         const url = process.env.NEXT_PUBLIC_VERCEL_URL
-    //         ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api`
-    //         : "http://localhost:3000/api";
-        
-    //         fetch(`${url}/baldwinTree/`)
-    //         .then((res) => {
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-    //             statement =  data.statment
-    //             row = data.child
-    //         })
-    //     }
-    //     statementSelected()
-    // }, [])
 
+function AuthorTreeComponent() {
     GetChildren()
     const imageSrc = useSearchParams().get('imageSrc')
     let pathname = usePathname();

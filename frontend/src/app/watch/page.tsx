@@ -1,29 +1,29 @@
 'use client';
 
 import NavigationBar from "../components/navBar"
-import { podcastSrcs } from "../podcastSrc";
+import { videoSrc } from "../videoSrc";
 import { useRouter } from 'next/navigation';
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react";
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 import { useState } from "react";
 import { ReadingTopics } from "../readings";
-import PodcastDisplayComponent from "../components/podcastDisplay";
+import WatchDisplay from "../components/videoDisplay";
 
 function indexGenerator() {
-    const index = Math.floor(Math.random()*podcastSrcs.length)
+    const index = Math.floor(Math.random()*videoSrc.length)
     return index;
 }
 
 function mapGenerator() {
-    let podcastsMap = new Map();
-    for (var i = 0; i < podcastSrcs.length; i++) {
-      let currTopic = podcastSrcs[i].type
-      if (podcastsMap.has(currTopic)) {
-        podcastsMap.get(currTopic).push(podcastSrcs[i])
+    let vidMap = new Map();
+    for (var i = 0; i < videoSrc.length; i++) {
+      let currTopic = videoSrc[i].type
+      if (vidMap.has(currTopic)) {
+        vidMap.get(currTopic).push(videoSrc[i])
       } else {
-        podcastsMap.set(currTopic, [podcastSrcs[i]])
+        vidMap.set(currTopic, [videoSrc[i]])
       }
     }
-    return podcastsMap;
+    return vidMap;
 }
   
   function findTopics(topic: string) {
@@ -35,15 +35,15 @@ function mapGenerator() {
     return [Math.floor(Math.random()*topicList.length), topicList]
   }
 
-export default function PodcastDisplay() {
+export default function WatcbDisplay() {
     const index = indexGenerator()
     const router = useRouter();
     const [isTopicPicked, setIsTopicPicked] = useState(false)
-    const [podcastType, setPodcastType] = useState('')
+    const [watchType, setWatchType] = useState('')
   
-    function handleOnClick(podcastType: string) {
+    function handleOnClick(watchType: string) {
         setIsTopicPicked(true)
-        setPodcastType(podcastType)
+        setWatchType(watchType)
     }
 
     return (
@@ -70,33 +70,30 @@ export default function PodcastDisplay() {
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.RACIAL_JUSTICE)} onTouchStart={() => handleOnClick(ReadingTopics.RACIAL_JUSTICE)}>
               {ReadingTopics.RACIAL_JUSTICE}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.SUDAN)} onTouchStart={() => handleOnClick(ReadingTopics.SUDAN)}>
-              {ReadingTopics.SUDAN}
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.MASS_INC)} onTouchStart={() => handleOnClick(ReadingTopics.MASS_INC)}>
+              {ReadingTopics.MASS_INC}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
-              {ReadingTopics.CONGO}
-            </DropdownItem>
-            <DropdownItem onClick={() => router.push('/allpodcasts')} onTouchStart={() => router.push('/allpodcasts')}>
-              All Podcasts
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.FEMINISM)} onTouchStart={() => handleOnClick(ReadingTopics.FEMINISM)}>
+              {ReadingTopics.FEMINISM}
             </DropdownItem>
         </DropdownMenu>
       </Dropdown>
       
       </div> 
             <h1 className="pt-6 mb-4 flex justify-center text-4xl xsm:text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                Listen to Something&nbsp;<div className="text-red-500">Today</div>.
+                Watch Something&nbsp;<div className="text-red-500">Today</div>.
             </h1>
             <br />
             <br />
             <p className="flex justify-center text-3xl dark:text-white">
-                Spotlight Podcast
+                Spotlight Video
             </p>
             <br />
 
             {isTopicPicked ? (
-                <PodcastDisplayComponent podcastObject={findTopics(podcastType)![1][findTopics(podcastType)![0]]}/>
+                <WatchDisplay videoObject={findTopics(watchType)![1][findTopics(watchType)![0]]}/>
             ) : (
-                <PodcastDisplayComponent podcastObject={podcastSrcs[index]}/>
+                <WatchDisplay videoObject={videoSrc[index]}/>
             )}
             <br />
             <br />

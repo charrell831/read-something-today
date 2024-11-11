@@ -21,9 +21,9 @@ class Node:
 
 @app.route('/api/baldwinTree/', methods=['GET'])
 def baldwinTree():
-    root = Node('I want to read...');
-    (root.child).append(Node('Fiction'));
-    (root.child).append(Node('Non-Fiction'));
+    root = Node('I want to read...')
+    (root.child).append(Node('Fiction'))
+    (root.child).append(Node('Non-Fiction'))
     (root.child[0].child).append(Node('I want to be happy'))
     (root.child[0].child).append(Node('I want to cry'))
     (root.child[0].child).append(Node('I want to sob'))

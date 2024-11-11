@@ -35,14 +35,6 @@ export default function NavigationBar() {
                 <Navbar className="bg-black **nav.scrolled { @apply shadow-2xl; border-bottom: 0px; }">
                     <NavbarContent justify="center">
                         <NavbarItem>
-                            {/* <Button 
-                                type="button" 
-                                className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 text-white focus:ring-gray-300 dark:focus:ring-gray-600" 
-                                id="user-menu-button" 
-                                aria-expanded="false"
-                                onClick={() =>  '/auth'}>
-                                Sign In 
-                            </Button> */}
                         </NavbarItem>
                         <NavbarItem>
                             <Button 
@@ -66,6 +58,14 @@ export default function NavigationBar() {
                                 onClick={() => {router.push('/welcome')}}
                             >
                                 About
+                            </Button>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <Button 
+                                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
+                                onClick={() => {router.push('/watch')}}
+                            >
+                                Videos
                             </Button>
                         </NavbarItem>
                         {/* <NavbarItem>

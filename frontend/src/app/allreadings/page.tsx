@@ -9,7 +9,7 @@ export default function AllReadings () {
     return (
         <div>
             <NavigationBar />
-            <div className="px-40">
+            <div className="px-[15%]">
                 <h1 className="pr-4 pl-4 pt-6 mb-4 flex text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                     All Readings Used In This Site Are Listed Below...
                 </h1>

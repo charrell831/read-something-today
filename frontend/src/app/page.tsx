@@ -7,7 +7,6 @@ import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org
 import { ReadingTopics } from "./readings";
 import { useState } from "react";
 import ReadingDisplay from "./components/readingDisplay";
-import Image from 'next/image'
 
 function indexGenerator() {
   const index = Math.floor(Math.random()*Readings().length)
@@ -82,7 +81,7 @@ export default function Page() {
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CONGO)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
               {ReadingTopics.CONGO}
             </DropdownItem>
-            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.EDUCATION)} onTouchStart={() => handleOnClick(ReadingTopics.CONGO)}>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.EDUCATION)} onTouchStart={() => handleOnClick(ReadingTopics.EDUCATION)}>
               {ReadingTopics.EDUCATION}
             </DropdownItem>
             <DropdownItem onClick={() => router.push('/allreadings')} onTouchStart={() => router.push('/allreadings')}>
@@ -109,23 +108,6 @@ export default function Page() {
         <ReadingDisplay readingObject={Readings()[index]}/>
       )}
       <br />
-{/* 
-      <div className="flex justify-center">
-        <h1 className="pt-6 mb-4  text-3xl font-extrabold leading-none tracking-tight text-gray-900 xsm:text-1xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
-          How it  &nbsp; <div className="text-red-500">works</div>:
-        </h1>
-        <br/>
-        <br/>
-        <p className="flex justify-center text-3xl xsm:text-1xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">
-          Each time you load the site, a new reading is requested!
-        </p>
-        <Image
-          src="/boyreadingblack.png"
-          width={350}
-          height={350}
-          alt="Person reading"
-        />
-      </div> */}
       
       <br />
       <br />
