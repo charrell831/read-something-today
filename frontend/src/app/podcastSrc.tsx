@@ -97,5 +97,25 @@ export const podcastSrcs = [
         title: 'Understanding energy justice with Dr. Mfoniso Antia',
         type: ReadingTopics.CLIMATE_JUSTICE
     },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/6rj6lCJnTo8MQJh6Ilxxe9?utm_source=generator',
+        title: 'Debunking Zionist Talking Points',
+        type: ReadingTopics.PALESTINE
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/6rj6lCJnTo8MQJh6Ilxxe9?utm_source=generator',
+        title: 'Debunking Zionist Talking Points',
+        type: ReadingTopics.PALESTINE
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/104Mo2bURSjYOjQ5ZQeCM8?utm_source=generator',
+        title: 'Women of the Black Panther Party',
+        type: ReadingTopics.RACIAL_JUSTICE
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/0VjooN8SEX3P1RsuBMPGMc?utm_source=generator',
+        title: 'Harvey Milk',
+        type: ReadingTopics.LGBTQIA
+    },
 
 ]

@@ -9,7 +9,7 @@ import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org
 export default function NavigationBar() {
     const router = useRouter();
     let isPhone = useMediaQuery("(max-width: 576px)")
-    const navMenu: {name:string, dir: string}[] = [{name: 'Home', dir: '/'}, {name: 'Podcasts', dir: '/podcasts'}, {name: 'Welcome', dir: '/welcome'}, {name: 'Watch', dir: '/watch'}]
+    const navMenu: {name:string, dir: string}[] = [{name: 'Home', dir: '/'}, {name: 'Podcasts', dir: '/podcasts'}, {name: 'Watch', dir: '/watch'}, {name: 'Welcome', dir: '/welcome'}]
     //const { user } = useAuth();
 
     return (
@@ -55,19 +55,20 @@ export default function NavigationBar() {
                         <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                                onClick={() => {router.push('/welcome')}}
+                                onClick={() => {router.push('/watch')}}
                             >
-                                About
+                                Watch
                             </Button>
                         </NavbarItem>
                         <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
-                                onClick={() => {router.push('/watch')}}
+                                onClick={() => {router.push('/welcome')}}
                             >
-                                Videos
+                                Welcome
                             </Button>
                         </NavbarItem>
+                        
                         {/* <NavbarItem>
                             <Button 
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent text-white"  
