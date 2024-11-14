@@ -82,5 +82,11 @@ export const podcastSrcs = [
         title: 'From Rubber Trade to Cultural Genocide: A History of Belgian Colonization in the Congo',
         type: ReadingTopics.CONGO
     },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/3Q02nMr02xh2zzS3CRvJM5?utm_source=generator',
+        title: 'bell hooks: A Conversation with Bell Hooks',
+        type: ReadingTopics.FEMINISM
+    },
+
 
 ]

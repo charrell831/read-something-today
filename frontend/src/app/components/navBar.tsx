@@ -9,7 +9,7 @@ import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org
 export default function NavigationBar() {
     const router = useRouter();
     let isPhone = useMediaQuery("(max-width: 576px)")
-    const navMenu: {name:string, dir: string}[] = [{name: 'Home', dir: '/'}, {name: 'Podcasts', dir: '/podcasts'}, {name: 'Welcome', dir: '/welcome'}]
+    const navMenu: {name:string, dir: string}[] = [{name: 'Home', dir: '/'}, {name: 'Podcasts', dir: '/podcasts'}, {name: 'Welcome', dir: '/welcome'}, {name: 'Watch', dir: '/watch'}]
     //const { user } = useAuth();
 
     return (

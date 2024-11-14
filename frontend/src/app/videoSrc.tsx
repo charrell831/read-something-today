@@ -47,4 +47,21 @@ export const videoSrc = [
         title: 'Black Leaders Discussion feat. Angela Davis, Kwame Ture & Fannie Lou Hamer (1973)',
         type: ReadingTopics.RACIAL_JUSTICE
     },
+    {
+        vidLink: 'https://www.youtube.com/embed/FSREpyM9ucQ',
+        title: 'Annual Public Lecture 2023 | Ericka Huggins',
+        type: ReadingTopics.RACIAL_JUSTICE
+    },
+    {
+        vidLink: 'https://www.youtube.com/embed/UD9IOllUR4k',
+        title: 'Berkeley professor explains gender theory | Judith Butler',
+        type: ReadingTopics.LGBTQIA
+    },
+    {
+        vidLink: 'https://www.youtube.com/embed/ChLv2wK0Eqs',
+        title: 'Who\'s Afraid of Gender? Judith Butler and Jack Halberstam in Conversation',
+        type: ReadingTopics.LGBTQIA
+    },
+    
+    
 ]
