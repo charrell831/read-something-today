@@ -62,11 +62,11 @@ export const videoSrc = [
         title: 'Who\'s Afraid of Gender? Judith Butler and Jack Halberstam in Conversation',
         type: ReadingTopics.LGBTQIA
     },
-    {
-        vidLink: 'https://www.youtube.com/embed/VDr0FKqH4LU&t=0s',
-        title: 'How Missouri\'s Broken Justice System Executed an Innocent Man | Marcellus Williams',
-        type: ReadingTopics.MASS_INC
-    },
+    // {
+    //     vidLink: 'https://www.youtube.com/embed/VDr0FKqH4LU&t=0s',
+    //     title: 'How Missouri\'s Broken Justice System Executed an Innocent Man | Marcellus Williams',
+    //     type: ReadingTopics.MASS_INC
+    // },
     
     
 ]
