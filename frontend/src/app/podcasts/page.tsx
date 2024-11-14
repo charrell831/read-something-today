@@ -76,6 +76,9 @@ export default function PodcastDisplay() {
             <DropdownItem onClick={()=>handleOnClick(ReadingTopics.FEMINISM)} onTouchStart={() => handleOnClick(ReadingTopics.FEMINISM)}>
               {ReadingTopics.FEMINISM}
             </DropdownItem>
+            <DropdownItem onClick={()=>handleOnClick(ReadingTopics.CLIMATE_JUSTICE)} onTouchStart={() => handleOnClick(ReadingTopics.CLIMATE_JUSTICE)}>
+              {ReadingTopics.CLIMATE_JUSTICE}
+            </DropdownItem>
             <DropdownItem onClick={() => router.push('/allpodcasts')} onTouchStart={() => router.push('/allpodcasts')}>
               All Podcasts
             </DropdownItem>

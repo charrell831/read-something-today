@@ -8,7 +8,8 @@ export enum ReadingTopics {
     SUDAN = 'Sudan',
     EDUCATION = 'Education',
     MASS_INC = 'Mass Incarceration',
-    FEMINISM = 'Feminism'
+    FEMINISM = 'Feminism',
+    CLIMATE_JUSTICE = 'Climate Justice'
 }
 
 function Readings() {

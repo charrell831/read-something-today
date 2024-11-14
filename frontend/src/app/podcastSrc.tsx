@@ -87,6 +87,15 @@ export const podcastSrcs = [
         title: 'bell hooks: A Conversation with Bell Hooks',
         type: ReadingTopics.FEMINISM
     },
-
+    {
+        podLink: 'https://open.spotify.com/embed/episode/7rlySvV4Qru4G7stwMe88M?utm_source=generator',
+        title: 'Ericka Huggins: Black Panthers, Activism, and Spiritual Practice',
+        type: ReadingTopics.RACIAL_JUSTICE
+    },
+    {
+        podLink: 'https://open.spotify.com/embed/episode/6vwZmbpdj30IcYP27tD58w?utm_source=generator',
+        title: 'Understanding energy justice with Dr. Mfoniso Antia',
+        type: ReadingTopics.CLIMATE_JUSTICE
+    },
 
 ]
